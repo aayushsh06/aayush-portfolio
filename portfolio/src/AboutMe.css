@@ -1,0 +1,59 @@
+div .intro {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    border: solid #c5f1e2 3px;
+}
+
+.profile{
+    padding: 30px;
+    object-fit: contain;
+    max-width: 100%;
+    width: 100px;
+    height: auto; 
+    border-radius: 100%;
+}
+
+h1 {
+    color: #42d9ff;
+    font-size: 2rem;
+}
+
+h2 span {
+    color: #42d9ff;
+    font-size: 1.5rem;
+}
+
+.labels {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    background-color: black;
+    border-radius: 10px;
+}
+
+.labels div{
+    display: flex;
+    background-color: #3f3f3f;
+    border-radius: 10px;
+    gap: 10px;
+    font-weight: 500;
+    align-items: center;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+.labels p{
+    font-weight: bold;
+    font-size: 0.8rem;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.labels img {
+    padding-left: 5px;
+    height: 20px;
+}
+.labels i {
+    padding-left: 5px;
+    color: #42d9ff;
+}
