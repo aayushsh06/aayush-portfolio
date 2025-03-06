@@ -18,14 +18,34 @@ const AboutMe = () => {
                 <p>University of Michigan</p>
             </div>
             <div>
+                <i className='fas fa-laptop-code'></i>
+                <p>Computer Science</p>
+            </div>
+            <div>
+                <i className='fas fa-graduation-cap'></i>
+                <p>Class of 2027</p>
+            </div>
+            <div>
                 <i className='fas fa-map-pin'></i>
                 <p>MI, United States</p>
             </div>
             <div>
-                <img src={UmichLogo} alt='Umich Logo'/>
-                <p>University of Michigan</p>
+                <i className='fas fa-flask'></i>
+                <p>Researcher</p>
+            </div>
+            <div>
+                <i className='fas fa-cogs'></i>
+                <p>Open Source Contributor</p>
             </div>
             
+        </div>
+        <div className='connect'>
+            <h2>Let's Connect</h2>
+            <div className='connection-forms'>
+                <a href='https://www.linkedin.com/in/aayushksharma' target='_blank'><i id='linkedIn' className='fa-brands fa-linkedin'></i>LinkedIn</a>
+                <a href='https://github.com/aayushsh06' target='_blank'><i className='fa-brands fa-github'></i>GitHub</a>
+                <a href='mailto:aayushksharma2006@gmail.com'><i class="fa-solid fa-envelope"></i>Email</a>
+            </div>
         </div>
     </div>
   )
