@@ -1,0 +1,56 @@
+.tech-stack {
+    border: solid #696868 1px;
+    max-width: 600px;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-weight: 100;
+}
+
+.tech-stack > h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 100;
+    color: white;
+    margin-bottom: 0px;
+}
+
+.tech-stack h2 {
+    color: #0077B5;
+    margin-left: 10px;
+}
+
+.tech-stack > h1 > i {
+    margin-right: 10px;
+    color: #0077B5;
+}
+
+.items {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.languages,
+.frameworks {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #232222;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.languages > p,
+.frameworks > p {
+    font-size: 1rem;
+    background-color:#3f3f3f;
+    margin: 5px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.languages > p > i,
+.frameworks > p > i {
+    margin-right: 10px;
+    color: #0077B5;
+}
+

@@ -1,6 +1,6 @@
 import React from 'react'
-import './AboutMe.css'
-import UmichLogo from './assets/Umich.png'
+import '../styles/AboutMe.css'
+import UmichLogo from '../assets/Umich.png'
 
 const AboutMe = () => {
   return (
