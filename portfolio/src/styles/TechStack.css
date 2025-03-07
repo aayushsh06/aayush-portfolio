@@ -10,7 +10,7 @@
 .tech-stack > h1 {
     text-align: center;
     font-size: 2rem;
-    font-weight: 100;
+    font-weight: 400;
     color: #42d9ff;
     margin-bottom: 0px;
 }
@@ -24,7 +24,7 @@
 
 .tech-stack > h1 > i {
     margin-right: 10px;
-    color: #0077B5;
+    color: #42d9ff;
 }
 
 .items {
@@ -44,7 +44,8 @@
 
 .languages > p,
 .frameworks > p {
-    font-size: 0.8rem;
+    font-size: 1rem;
+    font-weight: 400;
     background-color:#3f3f3f;
     margin: 5px;
     padding: 15px;

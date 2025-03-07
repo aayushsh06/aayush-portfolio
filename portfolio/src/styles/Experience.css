@@ -18,7 +18,11 @@
 .experience h1 {
     font-size: 2.5rem;
     margin-bottom: 0px;
-    font-weight: 100;
+    font-weight: 400;
+}
+
+.experience i {
+    margin-right: 7px;
 }
 
 .timeline {
@@ -40,7 +44,8 @@
     justify-content: center;
     text-align: center;
     opacity: 0;
-    transform: translateX(100%);
+    transform: translateX(30%);
+    z-index:0;
     transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
 }
 
@@ -51,7 +56,8 @@
 
 .timeline-item.exit-left {
     opacity: 0;
-    transform: translateX(-100%);
+    transform: translateX(30%);
+    overflow: hidden;
 }
 
 .timeline-item.exit-right {
@@ -96,7 +102,7 @@
     left: 0;
     right: 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     width: 100%;
     transform: translateY(-50%);
 }

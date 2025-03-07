@@ -1,0 +1,51 @@
+.current {
+    border: solid #696868 1px;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.current>h1 {
+    font-weight: 400;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.cursor {
+    animation: blink 0.8s infinite;
+    color: white;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+.current p {
+    font-size: 1.25rem;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+
+.current span,
+.current a {
+    font-weight: 600;
+    color: #42d9ff;
+    text-decoration: none;
+}
+
+.current a{
+    display: inline-block;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.current a:hover{
+    transform: translateY(-3px);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.current i {
+    padding-right: 8px;
+}

@@ -23,6 +23,7 @@ const Experience = () => {
     const [selected, setSelected] = useState(0);
     const [direction, setDirection] = useState("right");
     const [intervalId, setIntervalId] = useState(null);
+    const [active, setActive] = useState(true);
 
     const goToNextEvent = () => {
         setDirection("right");
@@ -42,14 +43,19 @@ const Experience = () => {
     };
 
     useEffect(() => {
-        const id = setInterval(goToNextEvent, 5000);
-        setIntervalId(id);
-        return () => clearInterval(id);
-    }, []);
+        if(active){
+            const id = setInterval(goToNextEvent, 5000);
+            setIntervalId(id);
+            return () => clearInterval(id);
+        }
+        else{
+            clearAutoChangeInterval();
+        }
+    }, [active]);
 
     return (
         <div className='experience'>
-            <h1>Experience</h1>
+            <h1><i className='fa-solid fa-briefcase'></i>Experience</h1>
             <div className='timeline'>
                 {events.map((event, index) => {
                     let className = "timeline-item";
@@ -58,7 +64,7 @@ const Experience = () => {
                     else if (direction === "left" && index === (selected + 1) % events.length) className += " exit-right";
 
                     return (
-                        <div key={index} className={className} onClick={clearAutoChangeInterval}>
+                        <div key={index} className={className} onClick={() => setActive(prev => !prev)}>
                             <div className='timeline-content'>
                                 <h3>{event.title}</h3>
                                 <p className='date'>{event.date}</p>
@@ -70,20 +76,20 @@ const Experience = () => {
                     );
                 })}
                 <div className="arrows">
-                    <button
+                    {/*}<button
                         className="arrow left"
                         onClick={() => {
                             goToPreviousEvent();
-                            clearAutoChangeInterval();
+                            setActive(false);
                         }}
-                    >
+                    > 
                         ←
-                    </button>
+                    </button>{*/}
                     <button
                         className="arrow right"
                         onClick={() => {
                             goToNextEvent();
-                            clearAutoChangeInterval();
+                            setActive(false);
                         }}
                     >
                         →

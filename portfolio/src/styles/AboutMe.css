@@ -32,6 +32,14 @@ h2 span {
     font-size: 1.5rem;
 }
 
+.trait {
+    font-size: 1.75rem;
+}
+
+.cursor {
+    font-size: 2rem;
+}
+
 .labels {
     display: flex;
     flex-wrap: wrap;
