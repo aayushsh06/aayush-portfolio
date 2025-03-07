@@ -9,15 +9,17 @@
 
 .tech-stack > h1 {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 100;
     color: white;
     margin-bottom: 0px;
 }
 
 .tech-stack h2 {
-    color: #0077B5;
+    color: white;
     margin-left: 10px;
+    font-size: 1.25rem;
+    font-weight: 300;
 }
 
 .tech-stack > h1 > i {
@@ -37,11 +39,12 @@
     background-color: #232222;
     margin: 10px;
     border-radius: 5px;
+    padding: 10px;
 }
 
 .languages > p,
 .frameworks > p {
-    font-size: 1rem;
+    font-size: 0.8rem;
     background-color:#3f3f3f;
     margin: 5px;
     padding: 15px;
