@@ -18,6 +18,7 @@
 .experience h1 {
     font-size: 2.5rem;
     margin-bottom: 0px;
+    font-weight: 100;
 }
 
 .timeline {
@@ -37,17 +38,27 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 250px;
     text-align: center;
     opacity: 0;
-    transform: rotate(10deg) scale(0.8);
-    transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+    transform: translateX(100%);
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
 }
 
 .timeline-item.active {
     opacity: 1;
-    transform: rotate(0deg) scale(1);
+    transform: translateX(0);
 }
+
+.timeline-item.exit-left {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.timeline-item.exit-right {
+    opacity: 0;
+    transform: translateX(100%);
+}
+
 
 .timeline-content {
     background: #222;

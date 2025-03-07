@@ -1,5 +1,6 @@
 .about-me {
     max-width: 600px;
+    min-width: 400px;
     border: solid #696868 1px;
     border-radius: 5px;
     margin-left: 10px;
