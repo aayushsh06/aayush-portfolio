@@ -3,10 +3,9 @@
     flex-direction: column;
     align-items: center;
     padding: 0px 30px;
-    background: #121212;
     color: #fff;
     text-align: center;
-    min-width: 400px;
+    min-width: 385px;
     max-width: 100vw;
     margin-left: 10px;
     border: solid #696868 1px;

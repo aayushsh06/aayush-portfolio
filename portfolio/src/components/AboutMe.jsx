@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react'
 
 const AboutMe = () => {
 
-    const list = ['Full Stack Developer', 'Student', 'Software Engineer']
+    const list = ['Full Stack Developer', 'Comp Sci Student', 'Software Engineer']
 
     const [text, setText] = useState(list[0]);
     const [index, setIndex] = useState(0);

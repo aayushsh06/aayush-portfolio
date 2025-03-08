@@ -36,7 +36,7 @@ h2 span {
     font-size: 1.75rem;
 }
 
-.cursor {
+.about-me .cursor {
     font-size: 2rem;
 }
 
@@ -110,7 +110,7 @@ h2 span {
 }
 
 .connection-forms i {
-    padding-right: 8px;
+    margin-right: 5px;
 }
 
 #linkedIn{

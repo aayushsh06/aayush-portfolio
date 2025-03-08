@@ -1,4 +1,12 @@
 .app{
     display: flex;
     flex-wrap: wrap;
+    row-gap: 10px;
+}
+
+.column-3{
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 800px;
+    min-width: 300px;
 }
