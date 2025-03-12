@@ -1,6 +1,7 @@
 .app{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    justify-content: center;
     row-gap: 10px;
 }
 
@@ -8,5 +9,5 @@
     display: flex;
     flex-wrap: wrap;
     flex-basis: 800px;
-    min-width: 300px;
+    max-width: 1200px;
 }

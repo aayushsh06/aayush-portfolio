@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import '../styles/Current.css';
 
 const Current = () => {
-  const learning = ['React', 'SpringBoot', 'Machine Learning', 'Beautiful Soup', 'Amazon Web Services'];
+  const learning = ['React', 'SpringBoot', 'Machine Learning', 'Beautiful Soup', 'PostgreSQL', 'AWS Technologies'];
 
   const [text, setText] = useState(learning[0]);
   const [learningIndex, setLearningIndex] = useState(0);

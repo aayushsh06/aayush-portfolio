@@ -1,5 +1,5 @@
 .about-me {
-    max-width: 600px;
+    max-width: 500px;
     min-width: 400px;
     border: solid #696868 1px;
     border-radius: 5px;
@@ -24,7 +24,7 @@
 
 h1 {
     color: #42d9ff;
-    font-size: 2rem;
+    font-size: 1.75rem;
 }
 
 h2 span {
@@ -33,7 +33,7 @@ h2 span {
 }
 
 .trait {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
 }
 
 .about-me .cursor {
@@ -96,7 +96,7 @@ h2 span {
 }
 
 .connection-forms a {
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: 100;
     margin-right: 20px;
     text-decoration: none;

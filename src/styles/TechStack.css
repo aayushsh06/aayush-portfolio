@@ -1,6 +1,6 @@
 .tech-stack {
     border: solid #696868 1px;
-    max-width: 600px;
+    max-width: 500px;
     border-radius: 5px;
     margin-top: 10px;
     margin-left: 10px;
@@ -44,7 +44,7 @@
 
 .languages > p,
 .frameworks > p {
-    font-size: 1rem;
+    font-size: 0.75rem;
     font-weight: 400;
     background-color:#3f3f3f;
     margin: 5px;

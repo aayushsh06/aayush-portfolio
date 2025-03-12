@@ -1,11 +1,11 @@
 import React from 'react'
 import '../styles/ProjectCard.css'
 
-const ProjectCard = ({projectName, projectImage, githubLink, demoLink, techStack}) => {
+const ProjectCard = ({projectName, date, projectImage, githubLink, demoLink, techStack}) => {
   return (
     <div className='project-card'>  
       <h1>{projectName}</h1>
-      <h2>Jan 2021 - Mar 2022</h2>
+      <h2>{date}</h2>
       <img src={projectImage} alt={`Image of ${projectName}`}></img>
       <div className='tech-stack-used'>
         {techStack}
