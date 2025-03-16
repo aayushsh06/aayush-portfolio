@@ -1,13 +1,68 @@
-.app{
+.home-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+    height: 100vh;
+    flex-direction: column;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+.techStack-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+    height: 100vh;
+    opacity: 0;
+    animation: fadeIn 1s forwards 0.5s;
+}
+
+.experience-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+    height: 100vh;
+    opacity: 0;
+    animation: fadeIn 1s forwards 0.5s;
+}
+
+.app {
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
     row-gap: 10px;
 }
 
-.column-3{
+.column-3 {
     display: flex;
     flex-wrap: wrap;
     flex-basis: 800px;
     max-width: 1200px;
+}
+
+.scroll-button {
+    display: block;
+    margin: 30px auto;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    color: white;
+    background-color: #42d9ff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.scroll-button:hover {
+    background-color: #1e90ff;
+    transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
 }

@@ -1,83 +1,91 @@
 .about-me {
-    max-width: 500px;
-    min-width: 400px;
     border: solid #696868 1px;
-    border-radius: 5px;
+    border-radius: 10px;
     margin-left: 10px;
+    width: 60%;
+    padding: 20px;
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-me:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .intro {
     display: flex;
     align-items: center;
-    gap: 0px;
-    
+    gap: 20px;
 }
 
-.profile{
-    padding: 30px;
+.profile {
+    padding: 50px;
     object-fit: contain;
     max-width: 100%;
-    width: 100px;
+    width: 200px;
     height: auto; 
     border-radius: 100%;
 }
 
 h1 {
     color: #42d9ff;
-    font-size: 1.75rem;
+    font-size: 3rem;
 }
 
 h2 span {
     color: #42d9ff;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
 }
 
 .trait {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
 }
 
 .about-me .cursor {
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 .labels {
     display: flex;
     flex-wrap: wrap;
-    column-gap: 10px;
-    row-gap: 10px;
+    column-gap: 20px;
+    row-gap: 20px;
     background-color: #232222;
     border-radius: 10px;
     justify-content: flex-start;
-    padding: 10px;
-    margin-bottom: 20px;
-    margin-right: 10px;
-    margin-left: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+    margin-right: 20px;
+    margin-left: 20px;
 }
 
-.labels div{
+.labels div {
     display: flex;
     background-color: #3f3f3f;
     border-radius: 10px;
-    gap: 5px;
+    gap: 10px;
     font-weight: 200;
     align-items: center;
-    
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .labels div:hover {
-    transform: scale(1.05); 
-    transition: transform 0.3s ease-in-out; 
+    transform: scale(1.1);
+    background-color: #4a4a4a;
 }
 
-.labels p{
+.labels p {
     font-weight: 400;
-    font-size: 0.8rem;
-    padding-right: 5px;
+    font-size: 1.2rem;
+    padding-right: 10px;
 }
+
 .labels img,
 .labels i {
-    padding-left: 5px;
-    height: 20px;
+    padding-left: 10px;
+    height: 30px;
     color: #42d9ff;
 }
 
@@ -87,32 +95,33 @@ h2 span {
 }
 
 .connect > h2 {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
 }
 
 .connection-forms {
     color: white;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
 }
 
 .connection-forms a {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 100;
-    margin-right: 20px;
+    margin-right: 30px;
     text-decoration: none;
     color: inherit;
     display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.connection-forms a:hover{
-    transform: scale(1.1); 
-    transition: transform 0.3s ease-in-out; 
+.connection-forms a:hover {
+    transform: scale(1.2);
+    color: #1e90ff;
 }
 
 .connection-forms i {
-    margin-right: 5px;
+    margin-right: 10px;
 }
 
-#linkedIn{
+#linkedIn {
     color: #0077B5;
 }

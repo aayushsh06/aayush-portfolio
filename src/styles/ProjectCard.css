@@ -5,11 +5,18 @@
     flex-direction: column;
     color: white;
     border: solid #696868 1px;
-    margin-left: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
+    margin: 20px auto;
+    border-radius: 10px;
     max-width: 375px;
     max-height: 450px;
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .project-card h1 {
@@ -25,8 +32,6 @@
     display: block;
     margin: 0px;
     max-width: 250px;
-   /* padding-left: 25px; */
-    /*padding-right: 25px; */
     margin-bottom: 10px; 
     border-radius: 20px;
     border: solid white 1px;
@@ -104,7 +109,6 @@
         max-width: 100%;
         padding: 0px 15px 10px 15px;
     }
-
 
     .project-card .links a {
         margin-bottom: 10px;

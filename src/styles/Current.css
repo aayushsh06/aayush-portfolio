@@ -1,8 +1,17 @@
 .current {
     border: solid #696868 1px;
-    border-radius: 5px;
-    margin-left: 10px;
-    margin-top: 10px;
+    border-radius: 10px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 30%;
+}
+
+.current:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .current>h1 {
@@ -26,7 +35,6 @@
     font-size: 1.25rem;
     margin-left: 10px;
     margin-right: 10px;
-
 }
 
 .current span,
@@ -36,12 +44,12 @@
     text-decoration: none;
 }
 
-.current a{
+.current a {
     display: inline-block;
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
-.current a:hover{
+.current a:hover {
     transform: translateY(-3px);
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
 }

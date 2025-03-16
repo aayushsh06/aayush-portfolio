@@ -6,22 +6,36 @@ import Current from './Current.jsx'
 import ProjectCard from './ProjectCard.jsx'
 
 function App() {
+  const scrollToTechStack = () => {
+    document.querySelector('.techStack-section').scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <>
+      <div className='home-section'>
+        <AboutMe />
+        <button className='scroll-button' onClick={scrollToTechStack}>Learn About Me</button>
+      </div>
+      <div className='techStack-section'>
+        <TechStack />
+      </div>
+      <div className='experience-section'>
+        <Experience />
+      </div>
+              <Current />
+
       <div className='app'>
         <div className='column-1'>
-          <AboutMe />
-          <TechStack />
+
         </div>
         <div className='column-2'>
-          <Experience />
-          <Current />
+
         </div>
         <div className='column-3'>
           <ProjectCard
             projectName='Algo-Visualizer'
             date='February 2025 - Present'
-            projectImage='https://private-user-images.githubusercontent.com/179483573/421164490-3afa6e95-9abc-4608-9a40-fe95110f3689.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDE2NjE2MTcsIm5iZiI6MTc0MTY2MTMxNywicGF0aCI6Ii8xNzk0ODM1NzMvNDIxMTY0NDkwLTNhZmE2ZTk1LTlhYmMtNDYwOC05YTQwLWZlOTUxMTBmMzY4OS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwMzExJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDMxMVQwMjQ4MzdaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1jYTc0MGNhYWQ3MWM3Njg3NDA2ZGM4ZTk3MGI4YzJhNjIxMjQ4OTI0MjYxMmQ1NGMxMWE2MTM4OWNiMTJiZTBkJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.RgY3xkzNkasbcaaW44wZna6p7e4NI1gC8GO1s5ehLE4'
+            projectImage='https://private-user-images.githubusercontent.com/179483573/421164490-3afa6e95-9abc-4608-9a40-fe95110f3689.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDIwOTQ5MzksIm5iZiI6MTc0MjA5NDYzOSwicGF0aCI6Ii8xNzk0ODM1NzMvNDIxMTY0NDkwLTNhZmE2ZTk1LTlhYmMtNDYwOC05YTQwLWZlOTUxMTBmMzY4OS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwMzE2JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDMxNlQwMzEwMzlaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT04YWYzNmRmZDEwOGU2ODZjZmEzOGNhMzEwYmUwMjY1MDFiYWRkNDQwZTY2NTNkY2I4OTExN2FkNjkzOWY3ZDZmJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.giXpBaNHQRv-ybdEiQsCmtEOvxniFQx-P0tskLunjOo'
             githubLink='https://github.com/aayushsh06/Algo-Visualizer'
             demoLink='https://aayushsh06.github.io/Algo-Visualizer/'
             techStack={[

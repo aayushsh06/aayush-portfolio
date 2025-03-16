@@ -1,5 +1,25 @@
-body{
-    background-color: #121212;
+body {
+    background-color: #000000;
+    background-image: url("https://www.hdwallpapers.in/download/black_triangle_4k_hd_abstract_2-HD.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     color: #c5f1e2;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #ffffff;
+}
+
+a {
+    color: #42d9ff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #1e90ff;
 }
