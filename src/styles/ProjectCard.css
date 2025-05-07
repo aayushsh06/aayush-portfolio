@@ -19,7 +19,7 @@
 .project-image-container {
   position: relative;
   width: 100%;
-  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  padding-top: 56.25%; 
   overflow: hidden;
 }
 
@@ -51,6 +51,10 @@
   display: inline-block;
   margin: 0 6px 6px 0;
   letter-spacing: 0.02em;
+}
+
+.tech-stack {
+  padding-left: 0px;
 }
 
 .project-title {
@@ -119,7 +123,6 @@
   }
 }
 
-/* Make section headers (like .section-title or h2) stand out */
 .section-title, .featured-projects-title, .projects-header, h2 {
   color: #fff !important;
   font-weight: 800;
