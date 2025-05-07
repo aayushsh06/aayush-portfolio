@@ -13,6 +13,7 @@ import DiscordBots from '../assets/DiscordBots.png'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ProjectPage from './ProjectPage'; 
 import Navbar from './Navbar';
+import Education from './Education';
 
 function App() {
 
@@ -37,6 +38,10 @@ function App() {
               <main>
                 <section className="about-section">
                   <AboutMe />
+                </section>
+
+                <section className='education-section'>
+                  <Education />
                 </section>
 
                 <section className="tech-stack-section">
