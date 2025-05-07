@@ -75,3 +75,29 @@
         font-size: 1rem;
     }
 }
+
+.current-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.current-header svg {
+  color: #00a1ff;
+}
+
+.current-header h2 {
+  font-size: 2.5rem;
+  color: #fff;
+  font-weight: 700;
+  margin: 0;
+  text-align: left;
+}
+
+.horizontal-line {
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(to right, #00a1ff, transparent);
+  margin-bottom: 2rem;
+}

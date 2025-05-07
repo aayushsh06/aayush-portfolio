@@ -4,11 +4,22 @@ import Experience from './Experience.jsx'
 import '../styles/App.css'
 import Current from './Current.jsx'
 import ProjectCard from './ProjectCard.jsx'
-
+import { useEffect } from 'react';
+import AlgoScope from '../assets/AlgoScope.png'
+import MaizeMarket from '../assets/MaizeMarket.png'
+import TextToAI from '../assets/TextToAI.png'
+import Diffnosis from '../assets/Diffnosis.png'
+import DiscordBots from '../assets/DiscordBots.png'
 function App() {
   const scrollToSection = (sectionClass) => {
-    document.querySelector(`.${sectionClass}`).scrollIntoView({ behavior: 'smooth' });
+    const element = document.querySelector(`.${sectionClass}`);
+    if (element) {
+      const yOffset = -document.querySelector('.navigation').offsetHeight; 
+      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
   };
+
 
   return (
     <div className="portfolio-container">
@@ -32,19 +43,26 @@ function App() {
           <Experience />
         </section>
 
-        <section className="current-section">
+        {/*<section className="current-section">
           <Current />
-        </section>
+        </section> */}
 
         <section className="projects-section">
-          <h2>Featured Projects</h2>
+          <div className="projects-header">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+              <path d="M9 9h6v6H9z"></path>
+            </svg>
+            <h2>Featured Projects</h2>
+          </div>
+          <div className="horizontal-line"></div>
           <div className="projects-grid">
             <ProjectCard
-              projectName='Algo-Visualizer'
+              projectName='AlgoScope'
               date='February 2025 - Present'
-              projectImage='https://private-user-images.githubusercontent.com/179483573/421164490-3afa6e95-9abc-4608-9a40-fe95110f3689.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDIwOTQ5MzksIm5iZiI6MTc0MjA5NDYzOSwicGF0aCI6Ii8xNzk0ODM1NzMvNDIxMTY0NDkwLTNhZmE2ZTk1LTlhYmMtNDYwOC05YTQwLWZlOTUxMTBmMzY4OS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwMzE2JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDMxNlQwMzEwMzlaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT04YWYzNmRmZDEwOGU2ODZjZmEzOGNhMzEwYmUwMjY1MDFiYWRkNDQwZTY2NTNkY2I4OTExN2FkNjkzOWY3ZDZmJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.giXpBaNHQRv-ybdEiQsCmtEOvxniFQx-P0tskLunjOo'
-              githubLink='https://github.com/aayushsh06/Algo-Visualizer'
-              demoLink='https://aayushsh06.github.io/Algo-Visualizer/'
+              projectImage={AlgoScope}
+              githubLink='https://github.com/aayushsh06/AlgoScope'
+              demoLink='https://aayushsh06.github.io/AlgoScope/'
               techStack={[
                 <p key='13' className='frontend'>JavaScript</p>,
                 <p key='14' className='framework'>React</p>,
@@ -54,7 +72,7 @@ function App() {
             <ProjectCard
               projectName='Maize Market'
               date='December 2024 - March 2025'
-              projectImage='https://github.com/aayushsh06/Maize-Market/raw/master/project-images/landingPage.png'
+              projectImage={MaizeMarket}
               githubLink='https://github.com/aayushsh06/Maize-Market'
               techStack={[
                 <p key='5' className='backend'>Java</p>,
@@ -67,7 +85,7 @@ function App() {
             <ProjectCard
               projectName='Text-to-AI'
               date='November 2024 - January 2025'
-              projectImage='https://github.com/aayushsh06/Text-to-AI/raw/main/Text-to-AI.png'
+              projectImage={TextToAI}
               githubLink='https://github.com/aayushsh06/Text-to-AI'
               techStack={[
                 <p key='1' className='backend'>Python</p>,
@@ -79,7 +97,7 @@ function App() {
             <ProjectCard
               projectName='Diffnosis'
               date='September 2024 - November 2024'
-              projectImage='https://private-user-images.githubusercontent.com/179483573/421170369-bfd40673-cfd6-47e0-9622-88f8d2395417.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDE4MTU0OTEsIm5iZiI6MTc0MTgxNTE5MSwicGF0aCI6Ii8xNzk0ODM1NzMvNDIxMTcwMzY5LWJmZDQwNjczLWNmZDYtNDdlMC05NjIyLTg4ZjhkMjM5NTQxNy5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwMzEyJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDMxMlQyMTMzMTFaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0xNzY1ZjBjZTQ0YTNiMDg2MzE1MThjZmEzMmQ0MmU4NmU5ODdhYjRlYzkzYzRlZTI3NTY5NGRkMGU2ZTI1ZTgwJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.dopQz5agSyvxb2Vn99M3RkwgcY_1ZpQlRn13nfb0d4Y'
+              projectImage={Diffnosis}
               githubLink='https://github.com/aayushsh06/Diffnosis'
               demoLink=''
               techStack={[
@@ -91,7 +109,7 @@ function App() {
             <ProjectCard
               projectName='Discord Server Bot'
               date='June 2024 - August 2024'
-              projectImage='https://media.licdn.com/dms/image/v2/D562DAQFDfWl3Mw6etg/profile-treasury-image-shrink_160_160/profile-treasury-image-shrink_160_160/0/1736391977579?e=1742022000&v=beta&t=0G8p6ZtUht1OhKfONyVeuPXd7oNC3lTPqlbJ2OMMs0I'
+              projectImage={DiscordBots}
               githubLink='https://github.com/aayushsh06/Discord-Bots'
               demoLink='https://github.com/aayushsh06/Text-to-AI'
               techStack={[

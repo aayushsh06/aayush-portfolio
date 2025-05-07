@@ -9,28 +9,28 @@
 .experience-header {
   display: flex;
   align-items: center;
-  margin-bottom: 30px;
-}
-
-.experience-header h2 {
-  font-size: 2rem;
-  font-weight: 600;
-  color: #ffffff;
-  margin: 0;
-  display: flex;
-  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .experience-header svg {
   color: #00a1ff;
-  margin-right: 12px;
+  margin-right: 0;
+}
+
+.experience-header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+  text-align: left;
 }
 
 .horizontal-line {
-  height: 1px;
+  height: 2px;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.1);
-  margin: 20px 0 30px 0;
+  background: linear-gradient(to right, #00a1ff, transparent);
+  margin-bottom: 2rem;
 }
 
 .tab-list {

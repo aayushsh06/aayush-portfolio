@@ -39,8 +39,15 @@ const Current = () => {
   }, [index, dir, text, learning, learningIndex]);
 
   return (
-    <div className='current'>
-      <h1><i className='fas fa-rocket'></i>Current Work</h1>
+    <div className="current">
+      <div className="current-header">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <path d="M12 6v6l4 2"></path>
+        </svg>
+        <h2>Current</h2>
+      </div>
+      <div className="horizontal-line"></div>
       <p>
         I am currently exploring <span>{currLearning}</span><span className='cursor'></span>
       </p>

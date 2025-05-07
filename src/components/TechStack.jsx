@@ -11,8 +11,8 @@ const techGroups = [
       { name: 'C++', icon: <i className="fa-solid fa-c"></i> },
       { name: 'Python', icon: <i className="fa-brands fa-python"></i> },
       { name: 'JavaScript', icon: <i className="fa-brands fa-js"></i> },
-      { name: 'Swift', icon: <i className="fa-brands fa-swift"></i> },
-      { name: 'Bash', icon: <i className="fa-solid fa-terminal"></i> },
+      //{ name: 'Swift', icon: <i className="fa-brands fa-swift"></i> },
+      //{ name: 'Bash', icon: <i className="fa-solid fa-terminal"></i> },
       { name: 'HTML/CSS', icon: <i className="fa-brands fa-html5"></i> },
     ],
   },
@@ -67,10 +67,13 @@ const TechStack = () => {
 
   return (
     <section className={`tech-stack revamped ${isVisible ? 'fade-in' : ''}`}>
-      <div className="tech-roadmap-title">
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+      <div className="tech-header">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+        </svg>
         <h2>Tech Stack</h2>
       </div>
+      <div className="horizontal-line"></div>
       <div className="tech-timeline">
         {techGroups.map((group, idx) => (
           <div className="tech-group" key={group.label} style={{ '--accent': group.color }}>

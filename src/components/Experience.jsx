@@ -115,7 +115,6 @@ const Experience = () => {
         </svg>
         <h2>Experience</h2>
       </div>
-
       <div className="horizontal-line"></div>
 
       <div className="tab-list">
