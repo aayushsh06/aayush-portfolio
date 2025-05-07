@@ -7,11 +7,21 @@
     animation: fadeIn 0.8s ease-out forwards;
 }
 
+.about-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto 2.5rem auto;
+}
+
 .about-header {
     display: flex;
     align-items: center;
     gap: 1rem;
-    margin-bottom: 2rem;
+    justify-content: flex-start;
+    width: 100%;
 }
 
 .about-header svg {
@@ -22,12 +32,13 @@
     font-size: 2.5rem;
     color: #fff;
     margin: 0;
+    text-align: left;
 }
 
-.horizontal-line {
-    height: 2px;
-    background: linear-gradient(to right, #00a1ff, transparent);
-    margin-bottom: 3rem;
+.about-section .horizontal-line {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
 }
 
 .about-content {

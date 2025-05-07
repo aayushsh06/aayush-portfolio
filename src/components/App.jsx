@@ -14,6 +14,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ProjectPage from './ProjectPage'; 
 import Navbar from './Navbar';
 import Education from './Education';
+import projects from './projectsData';
 
 function App() {
 
@@ -66,72 +67,20 @@ function App() {
                   </div>
                   <div className="horizontal-line"></div>
                   <div className="projects-grid">
-                    <ProjectCard
-                      projectId='algoscope'
-                      projectName='AlgoScope'
-                      date='February 2025 - Present'
-                      projectImage={AlgoScope}
-                      githubLink='https://github.com/aayushsh06/AlgoScope'
-                      demoLink='https://aayushsh06.github.io/AlgoScope/'
-                      techStack={[
-                        <p key='13' className='frontend'>JavaScript</p>,
-                        <p key='14' className='framework'>React</p>,
-                        <p key='15' className='html-css'>HTML/CSS</p>
-                      ]}
-                    />
-                    <ProjectCard
-                      projectId='maize-market'
-                      projectName='Maize Market'
-                      date='December 2024 - March 2025'
-                      projectImage={MaizeMarket}
-                      githubLink='https://github.com/aayushsh06/Maize-Market'
-                      techStack={[
-                        <p key='5' className='backend'>Java</p>,
-                        <p key='6' className='framework'>SpringBoot</p>,
-                        <p key='7' className='frontend'>JavaScript</p>,
-                        <p key='8' className='framework'>React</p>,
-                        <p key='9' className='html-css'>HTML/CSS</p>
-                      ]}
-                    />
-                    <ProjectCard
-                      projectId='text-to-ai'
-                      projectName='Text-to-AI'
-                      date='November 2024 - January 2025'
-                      projectImage={TextToAI}
-                      githubLink='https://github.com/aayushsh06/Text-to-AI'
-                      techStack={[
-                        <p key='1' className='backend'>Python</p>,
-                        <p key='2' className='framework'>Flask</p>,
-                        <p key='3' className='frontend'>JavaScript</p>,
-                        <p key='4' className='html-css'>HTML/CSS</p>
-                      ]}
-                    />
-                    <ProjectCard
-                      projectId='diffnosis'
-                      projectName='Diffnosis'
-                      date='September 2024 - November 2024'
-                      projectImage={Diffnosis}
-                      githubLink='https://github.com/aayushsh06/Diffnosis'
-                      demoLink=''
-                      techStack={[
-                        <p key='10' className='frontend'>Swift</p>,
-                        <p key='11' className='backend'>Python</p>,
-                        <p key='12' className='framework'>Pandas</p>
-                      ]}
-                    />
-                    <ProjectCard
-                      projectId='discord-server-bot'
-                      projectName='Discord Server Bot'
-                      date='June 2024 - August 2024'
-                      projectImage={DiscordBots}
-                      githubLink='https://github.com/aayushsh06/Discord-Bots'
-                      demoLink='https://github.com/aayushsh06/Text-to-AI'
-                      techStack={[
-                        <p key='13' className='frontend'>Swift</p>,
-                        <p key='14' className='backend'>Python</p>,
-                        <p key='15' className='framework'>Pandas</p>
-                      ]}
-                    />
+                    {projects.map((project) => (
+                      <ProjectCard
+                        key={project.id}
+                        projectId={project.id}
+                        projectName={project.name}
+                        date={project.dates}
+                        projectImage={project.image}
+                        githubLink={project.githubLink}
+                        demoLink={project.demoLink}
+                        techStack={project.techStack.map((tech, idx) => (
+                          <p key={idx} className={tech.toLowerCase().replace(/[^a-z0-9]/g, '-')}>{tech}</p>
+                        ))}
+                      />
+                    ))}
                   </div>
                 </section>
               </main>

@@ -66,34 +66,36 @@ const TechStack = () => {
   }, []);
 
   return (
-    <section className={`tech-stack revamped ${isVisible ? 'fade-in' : ''}`}>
-      <div className="tech-header">
+    <>
+      <div className="tech-stack-header">
         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
         </svg>
         <h2>Tech Stack</h2>
       </div>
       <div className="horizontal-line"></div>
-      <div className="tech-timeline">
-        {techGroups.map((group, idx) => (
-          <div className="tech-group" key={group.label} style={{ '--accent': group.color }}>
-            <div className="tech-group-header">
-              <span className="group-icon" style={{ color: group.color }}>{group.icon}</span>
-              <span className="group-label">{group.label}</span>
+      <section className={`tech-stack revamped ${isVisible ? 'fade-in' : ''}`}>
+        <div className="tech-timeline">
+          {techGroups.map((group, idx) => (
+            <div className="tech-group" key={group.label} style={{ '--accent': group.color }}>
+              <div className="tech-group-header">
+                <span className="group-icon" style={{ color: group.color }}>{group.icon}</span>
+                <span className="group-label">{group.label}</span>
+              </div>
+              <div className="tech-bubbles">
+                {group.items.map((item) => (
+                  <div className="tech-bubble" key={item.name}>
+                    <span className="bubble-icon">{item.icon}</span>
+                    <span className="bubble-label">{item.name}</span>
+                  </div>
+                ))}
+              </div>
+              {idx !== techGroups.length - 1 && <div className="timeline-connector"></div>}
             </div>
-            <div className="tech-bubbles">
-              {group.items.map((item) => (
-                <div className="tech-bubble" key={item.name}>
-                  <span className="bubble-icon">{item.icon}</span>
-                  <span className="bubble-label">{item.name}</span>
-                </div>
-              ))}
-            </div>
-            {idx !== techGroups.length - 1 && <div className="timeline-connector"></div>}
-          </div>
-        ))}
-      </div>
-    </section>
+          ))}
+        </div>
+      </section>
+    </>
   );
 };
 

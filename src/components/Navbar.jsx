@@ -4,7 +4,8 @@ import '../styles/Navbar.css';
 
 const NAV_ITEMS = [
   { label: 'About', section: 'about-section' },
-  { label: 'Skills', section: 'tech-stack-section' },
+  { label: 'Education', section: 'education-section' },
+  { label: 'Tech Stack', section: 'tech-stack-section' },
   { label: 'Experience', section: 'experience-section' },
   { label: 'Projects', section: 'projects-section' },
 ];

@@ -75,9 +75,31 @@ section h2 {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2rem;
-  padding: 2rem 0;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+}
+
+@media (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+}
+
+.project-card {
+  max-width: 420px;
+  min-width: 0;
+  padding: 1.2rem 1rem;
+  border-radius: 14px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.13);
+  background: #1c2333;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.project-card:hover {
+  box-shadow: 0 6px 28px rgba(0,161,255,0.15);
+  transform: translateY(-4px);
 }
 
 @media (max-width: 768px) {
@@ -124,7 +146,6 @@ section h2 {
 section {
   animation: fadeIn 0.8s ease-out;
 }
-
 .projects-header {
   display: flex;
   align-items: center;
@@ -149,4 +170,37 @@ section {
   width: 100%;
   background: linear-gradient(to right, #00a1ff, transparent);
   margin-bottom: 2rem;
+}
+
+.about-section,
+.education-section,
+.tech-stack-section,
+.experience-section,
+.projects-section {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto 2.5rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.about-section h2,
+.education-header,
+.tech-stack-header,
+.experience-header,
+.projects-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.horizontal-line {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 0 2rem 0;
 }

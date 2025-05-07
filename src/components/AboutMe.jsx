@@ -82,7 +82,7 @@ const AboutMe = () => {
                     <div className="profile-info">
                         <h1>Aayush</h1>
                         <h2>
-                            I'm a{' '}
+                            I'm a{''}
                             <span className="trait-container">
                                 <span className="trait">{displayText}</span>
                                 <span className="cursor"></span>

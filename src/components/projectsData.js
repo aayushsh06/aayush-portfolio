@@ -20,7 +20,7 @@ const projects = [
     name: 'Maize Market',
     image: MaizeMarket,
     description: 'Maize Market is a full-stack online marketplace where University of Michigan students can trade products. It features secure user authentication, product listings, a shopping cart, and a real-time chat system for communicating product exchange. Built to handle real-time communication and updates, it helps users browse and purchase products easily within a student-focused community.',
-    techStack: ['Java', 'SpringBoot', 'JavaScript', 'React', 'HTML/CSS'],
+    techStack: ['Java', 'SpringBoot', 'JavaScript', 'React', 'HTML/CSS', 'PostgreSQL'],
     githubLink: 'https://github.com/aayushsh06/Maize-Market',
     demoLink: '',
     dates: 'November 2024 – Present',

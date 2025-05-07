@@ -1,16 +1,24 @@
 .experience-container {
-  max-width: 900px;
   width: 100%;
-  margin: 60px auto;
+  margin: 0 auto 2.5rem auto;
   color: #ffffff;
-  min-height: 1000px;
+}
+
+.experience-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto 2.5rem auto;
 }
 
 .experience-header {
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-bottom: 0.5rem;
+  justify-content: flex-start;
+  width: 100%;
 }
 
 .experience-header svg {
@@ -26,11 +34,10 @@
   text-align: left;
 }
 
-.horizontal-line {
-  height: 2px;
+.experience-section .horizontal-line {
+  margin-left: 0;
+  margin-right: 0;
   width: 100%;
-  background: linear-gradient(to right, #00a1ff, transparent);
-  margin-bottom: 2rem;
 }
 
 .tab-list {
@@ -100,7 +107,6 @@
   background-color: #1c2333;
   border-radius: 8px;
   padding: 24px;
-  max-width: 900px;
   width: 100%;
 }
 

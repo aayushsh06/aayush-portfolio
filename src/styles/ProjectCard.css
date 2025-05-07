@@ -9,6 +9,10 @@
   flex-direction: column;
   gap: 1.2rem;
   color: #fff;
+  height: 100%;
+  width: 484px;
+  max-width: 484px;
+  min-width: 0;
 }
 
 .project-card:hover {
@@ -54,7 +58,11 @@
 }
 
 .tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0rem;
   padding-left: 0px;
+  justify-content: center;
 }
 
 .project-title {
@@ -202,4 +210,11 @@
   .hamburger {
     display: flex;
   }
+}
+
+.projects-grid {
+  max-width: 1000px;
+  grid-template-columns: repeat(2, 484px);
+  gap: 2rem;
+  margin: 0 auto;
 }

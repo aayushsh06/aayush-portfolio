@@ -1,6 +1,47 @@
 .tech-stack-section {
-    padding-bottom: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1000px;
 }
+
+.tech-stack-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: flex-start;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.tech-stack-header svg {
+    color: #00a1ff;
+    width: 28px;
+    height: 28px;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.tech-stack-header h2 {
+    font-size: 2.5rem;
+    color: #fff;
+    font-weight: 700;
+    margin: 0;
+    text-align: left;
+    line-height: 1;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.tech-stack-header .horizontal-line,
+.tech-stack-section .horizontal-line {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    margin-bottom: 0.7rem;
+}
+
 .tech-stack {
     max-width: 1200px;
     margin: 0 auto;
@@ -160,10 +201,15 @@
   padding: 2.5rem 2rem;
   background: rgba(28, 35, 51, 0.98);
   border-radius: 18px;
-  box-shadow: 0 6px 32px rgba(0,0,0,0.18);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.13);
   position: relative;
   overflow: visible;
   animation: fadeIn 0.8s ease-out;
+  transition: box-shadow 0.2s;
+}
+
+.tech-stack.revamped:hover {
+  box-shadow: 0 6px 28px rgba(0,161,255,0.15);
 }
 
 .tech-roadmap-title { display: none; }
