@@ -200,3 +200,52 @@
     font-size: 1.1rem;
   }
 }
+
+@media (max-width: 700px) {
+  .experience-section {
+    padding: 1rem 0.2rem;
+  }
+  .experience-header h2 {
+    font-size: 1.3rem;
+  }
+  .experience-header svg {
+    width: 20px;
+    height: 20px;
+  }
+  .tab-list {
+    gap: 0.5rem;
+  }
+  .tab-button {
+    padding: 0.7rem 0.5rem;
+    font-size: 0.95rem;
+    border-radius: 8px;
+  }
+  .tab-button-icon {
+    width: 18px;
+    height: 18px;
+  }
+  .content-area {
+    padding: 1rem 0.5rem;
+    border-radius: 10px;
+  }
+  .role-title {
+    font-size: 1.1rem;
+  }
+  .company-name {
+    font-size: 1rem;
+  }
+  .date {
+    font-size: 0.9rem;
+  }
+  .skills-container {
+    gap: 0.3rem;
+  }
+  .skill-tag {
+    font-size: 0.75rem;
+    padding: 4px 10px;
+  }
+  .bullet-list li {
+    font-size: 0.92rem;
+    margin-bottom: 0.5rem;
+  }
+}

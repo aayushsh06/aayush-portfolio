@@ -62,7 +62,7 @@
   flex-wrap: wrap;
   gap: 0rem;
   padding-left: 0px;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .project-title {
@@ -209,6 +209,38 @@
   }
   .hamburger {
     display: flex;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    max-width: 98vw;
+    padding: 0.5rem 0;
+  }
+  .project-card {
+    width: 98vw;
+    max-width: 98vw;
+    min-width: 0;
+    padding: 1rem 0.5rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    gap: 0.7rem;
+  }
+  .project-title {
+    font-size: 1.1rem;
+  }
+  .project-description {
+    font-size: 0.95rem;
+  }
+  .project-image-container {
+    padding-top: 60%;
+  }
+  .project-tech-tag, .tech-stack p, .tech-stack .frontend, .tech-stack .backend, .tech-stack .framework, .tech-stack .html-css {
+    font-size: 0.75rem;
+    padding: 4px 10px;
+  }
+  .project-links {
+    gap: 0.5rem;
   }
 }
 

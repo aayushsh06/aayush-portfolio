@@ -79,6 +79,17 @@
 .trait-container {
     color: #00a1ff;
     font-weight: 600;
+    margin-left: 0px;
+    padding-left: 0px;
+    display: inline;
+    font-size: inherit;
+}
+
+.trait {
+    display: inline;
+    font-size: inherit;
+    margin: 0;
+    padding: 0;
 }
 
 .cursor {
@@ -249,5 +260,55 @@
         width: 28px;
         height: 28px;
         color: #00a1ff;
+    }
+}
+
+@media (max-width: 700px) {
+    .about-section {
+        padding: 1.2rem 0.2rem;
+    }
+    .about-header h2 {
+        font-size: 1.5rem;
+    }
+    .profile-section {
+        grid-template-columns: 80px 1fr;
+        gap: 1rem;
+        align-items: center;
+    }
+    .profile-image {
+        width: 80px;
+        height: 80px;
+        border-width: 2px;
+    }
+    .profile-info h1 {
+        font-size: 2rem;
+    }
+    .profile-info h2 {
+        font-size: 1rem;
+    }
+    .info-cards {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+    .info-card {
+        padding: 0.7rem 0.5rem;
+        font-size: 0.95rem;
+        border-radius: 8px;
+    }
+    .info-icon {
+        width: 20px;
+        height: 20px;
+    }
+    .connect-section h3 {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+    .connect-links {
+        gap: 0.7rem;
+    }
+    .connect-link {
+        padding: 0.4rem 0.7rem;
+        font-size: 1rem;
+        border-radius: 6px;
     }
 }
