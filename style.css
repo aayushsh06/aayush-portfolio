@@ -11,6 +11,23 @@ body {
     overflow-x: hidden;
 }
 
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(15, 20, 30, 0.82);
+    z-index: 0;
+    pointer-events: none;
+}
+
+body > * {
+    position: relative;
+    z-index: 1;
+}
+
 h1, h2, h3, h4, h5, h6 {
     color: #ccd6f6;
     font-family: 'Calibre', 'Inter', sans-serif;

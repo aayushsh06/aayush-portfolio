@@ -1,47 +1,137 @@
-import React from 'react'
-import '../styles/TechStack.css'
+import React, { useState, useEffect } from 'react';
+import '../styles/TechStack.css';
 
 const TechStack = () => {
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                if (entries[0].isIntersecting) {
+                    setIsVisible(true);
+                }
+            },
+            { threshold: 0.2 }
+        );
+
+        const container = document.querySelector('.tech-stack');
+        if (container) {
+            observer.observe(container);
+        }
+
+        return () => {
+            if (container) {
+                observer.unobserve(container);
+            }
+        };
+    }, []);
+
     return (
-        <div className='tech-stack'>
-            <h1><i className='fa-solid fa-server'></i>My Tech Stack</h1>
-            <div className='items'>
-            <div>
-                <h2>Languages</h2>
-                <div className='languages'>
-                    <p><i className='fa-brands fa-java'></i>Java</p>
-                    <p><i className='fa-solid fa-c'></i>C++</p>
-                    <p><i className='fa-brands fa-python'></i>Python</p>
-                    <p><i className='fa-brands fa-js'></i>JavaScript</p>
-                    <p><i className='fa-solid fa-database'></i>SQL</p>
-                    <p><i className='fa-brands fa-html5'></i>HTML/CSS</p>
-                    <p><i className='fa-solid fa-terminal'></i>Bash</p>
-                    <p><i className='fa-brands fa-swift'></i>Swift</p>
-                </div>
+        <div className={`tech-stack ${isVisible ? 'fade-in' : ''}`}>
+            <div className="tech-header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                </svg>
+                <h2>Tech Stack</h2>
             </div>
-            <div>
-                <h2>Frameworks/Technologies</h2>
-                <div className='frameworks'>
-                    <p><i className='fa-solid fa-seedling'></i>Spring Boot</p>
-                    <p><i className='fa-brands fa-react'></i>React</p>
-                    <p><i className='fa-solid fa-database'></i>Hibernate</p>
-                    <p><i className='fa-brands fa-node'></i>Node.js</p>
-                    <p><i className='fa-solid fa-flask'></i>Flask</p>
 
-                    <p><i className='fa-solid fa-chart-line'></i>Pandas</p>
-                    <p><i className='fa-solid fa-brain'></i>Scikit-learn</p>
-                    <p><i className='fa-solid fa-robot'></i>TensorFlow</p>
+            <div className="horizontal-line"></div>
 
-                    <p><i className='fa-brands fa-git-alt'></i>Git</p>
-                    <p><i className='fa-brands fa-linux'></i>Linux</p>
+            <div className="items">
+                <div className="tech-section">
+                    <h3>Languages</h3>
+                    <div className="tech-grid">
+                        <div className="tech-item">
+                            <i className="fa-brands fa-java"></i>
+                            <span>Java</span>
+                        </div>
+                        <div className="tech-item">
+                            <i className="fa-solid fa-c"></i>
+                            <span>C++</span>
+                        </div>
+                        <div className="tech-item">
+                            <i className="fa-brands fa-python"></i>
+                            <span>Python</span>
+                        </div>
+                        <div className="tech-item">
+                            <i className="fa-brands fa-js"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div className="tech-item">
+                            <i className="fa-solid fa-database"></i>
+                            <span>SQL</span>
+                        </div>
+                        <div className="tech-item">
+                            <i className="fa-brands fa-html5"></i>
+                            <span>HTML/CSS</span>
+                        </div>
+                        <div className="tech-item">
+                            <i className="fa-solid fa-terminal"></i>
+                            <span>Bash</span>
+                        </div>
+                        <div className="tech-item">
+                            <i className="fa-brands fa-swift"></i>
+                            <span>Swift</span>
+                        </div>
+                    </div>
+                </div>
 
-                    <p><i className='fa-solid fa-database'></i>SQLite</p>
-                    <p><i className='fa-solid fa-database'></i>PostgreSQL</p>
+                <div className="tech-section">
+                    <h3>Frameworks & Technologies</h3>
+                    <div className="tech-grid">
+                        <div className="tech-item">
+                            <i className="fa-solid fa-seedling"></i>
+                            <span>Spring Boot</span>
+                        </div>
+                        <div className="tech-item">
+                            <i className="fa-brands fa-react"></i>
+                            <span>React</span>
+                        </div>
+                        <div className="tech-item">
+                            <i className="fa-solid fa-database"></i>
+                            <span>Hibernate</span>
+                        </div>
+                        <div className="tech-item">
+                            <i className="fa-brands fa-node"></i>
+                            <span>Node.js</span>
+                        </div>
+                        <div className="tech-item">
+                            <i className="fa-solid fa-flask"></i>
+                            <span>Flask</span>
+                        </div>
+                        <div className="tech-item">
+                            <i className="fa-solid fa-chart-line"></i>
+                            <span>Pandas</span>
+                        </div>
+                        <div className="tech-item">
+                            <i className="fa-solid fa-brain"></i>
+                            <span>Scikit-learn</span>
+                        </div>
+                        <div className="tech-item">
+                            <i className="fa-solid fa-robot"></i>
+                            <span>TensorFlow</span>
+                        </div>
+                        <div className="tech-item">
+                            <i className="fa-brands fa-git-alt"></i>
+                            <span>Git</span>
+                        </div>
+                        <div className="tech-item">
+                            <i className="fa-brands fa-linux"></i>
+                            <span>Linux</span>
+                        </div>
+                        <div className="tech-item">
+                            <i className="fa-solid fa-database"></i>
+                            <span>SQLite</span>
+                        </div>
+                        <div className="tech-item">
+                            <i className="fa-solid fa-database"></i>
+                            <span>PostgreSQL</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        </div>
-    )
-}
+    );
+};
 
-export default TechStack
+export default TechStack;

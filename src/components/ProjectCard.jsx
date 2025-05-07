@@ -1,24 +1,27 @@
-import React from 'react'
 import '../styles/ProjectCard.css'
 
-const ProjectCard = ({projectName, date, projectImage, githubLink, demoLink, techStack}) => {
+function ProjectCard({ projectName, date, projectImage, githubLink, demoLink, techStack }) {
   return (
-    <div className='project-card'>  
-      <h1>{projectName}</h1>
-      <h2>{date}</h2>
-      <img src={projectImage} alt={`Image of ${projectName}`}></img>
-      <div className='tech-stack-used'>
-        {techStack}
+    <div className="project-card">
+      <div className="project-image-container">
+        <img src={projectImage} alt={projectName} className="project-image" />
       </div>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum velit ut reiciendis? Perferendis facilis magni officiis inventore totam eveniet, excepturi est accusantium aperiam voluptatibus obcaecati blanditiis modi labore dignissimos debitis?</p>
-      <div className='links'>
-        <div className='github'>
-            <a href={githubLink} target='_blank'><i className='fa-brands fa-github'></i>GitHub</a>
+      <div className="project-content">
+        <h3 className="project-title">{projectName}</h3>
+        <p className="project-date">{date}</p>
+        <div className="project-links">
+          <a href={githubLink} target="_blank" rel="noopener noreferrer" className="project-link">
+            GitHub
+          </a>
+          {demoLink && (
+            <a href={demoLink} target="_blank" rel="noopener noreferrer" className="project-link">
+              Live Demo
+            </a>
+          )}
         </div>
-        {demoLink && <div className='demo'> 
-            <a href={demoLink} target='_blank'><i className='fas fa-eye'></i>Demo</a>
+        <div className="tech-stack">
+          {techStack}
         </div>
-            }
       </div>
     </div>
   )
