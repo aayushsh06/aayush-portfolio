@@ -1,127 +1,148 @@
 .about-me {
-    border: solid #696868 1px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #121212;
+    color: #e0e0e0;
     border-radius: 10px;
-    margin-left: 10px;
-    width: 60%;
-    padding: 20px;
-    background-color: #1e1e1e;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.about-me:hover {
-    transform: scale(1.02);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    width: 800px;
 }
 
 .intro {
     display: flex;
     align-items: center;
-    gap: 20px;
+    margin-bottom: 2rem;
+    text-align: center;
 }
 
 .profile {
-    padding: 50px;
-    object-fit: contain;
-    max-width: 100%;
-    width: 200px;
-    height: auto; 
-    border-radius: 100%;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1.5rem;
+    border: 3px solid #00a1ff;
+    box-shadow: 0 4px 10px rgba(0, 161, 255, 0.3);
 }
 
-h1 {
-    color: #42d9ff;
-    font-size: 3rem;
-}
-
-h2 span {
-    color: #42d9ff;
+.intro-text h1 {
     font-size: 2.5rem;
+    margin: 0;
+    color: #ffffff;
+}
+
+.intro-text h2 {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+    color: #b0b0b0;
 }
 
 .trait {
-    font-size: 2.5rem;
+    font-weight: 600;
+    color: #00a1ff;
 }
 
-.about-me .cursor {
-    font-size: 3rem;
+.cursor {
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    from, to { opacity: 0; }
+    50% { opacity: 1; }
 }
 
 .labels {
     display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    width: 100%;
     flex-wrap: wrap;
-    column-gap: 20px;
-    row-gap: 20px;
-    background-color: #232222;
-    border-radius: 10px;
-    justify-content: flex-start;
-    padding: 20px;
-    margin-bottom: 30px;
-    margin-right: 20px;
-    margin-left: 20px;
+    justify-content: center;
 }
 
 .labels div {
-    display: flex;
-    background-color: #3f3f3f;
-    border-radius: 10px;
-    gap: 10px;
-    font-weight: 200;
-    align-items: center;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    background: #1e1e1e;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    border: 1px solid #333333;
+    width: 200px;
 }
 
-.labels div:hover {
-    transform: scale(1.1);
-    background-color: #4a4a4a;
+.labels img {
+    width: 40px;
+    margin-bottom: 0.5rem;
 }
 
-.labels p {
-    font-weight: 400;
-    font-size: 1.2rem;
-    padding-right: 10px;
-}
-
-.labels img,
 .labels i {
-    padding-left: 10px;
-    height: 30px;
-    color: #42d9ff;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: #00a1ff;
 }
 
 .connect {
-    color: #42d9ff;
     text-align: center;
 }
 
-.connect > h2 {
-    font-size: 2.5rem;
+.connect h2 {
+    margin-bottom: 1rem;
+    color: #ffffff;
 }
 
-.connection-forms {
-    color: white;
-    margin-bottom: 30px;
+.connection-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
 }
 
-.connection-forms a {
-    font-size: 2rem;
-    font-weight: 100;
-    margin-right: 30px;
+.connection-links a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #00a1ff;
+    color: #121212;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
     text-decoration: none;
-    color: inherit;
+    transition: background 0.3s;
+}
+
+.connection-links a:hover {
+    background: #0080cc;
+}
+
+.connection-links i {
+    font-size: 1.2rem;
+}
+
+.trait-container {
     display: inline-block;
-    transition: transform 0.3s ease, color 0.3s ease;
+    min-width: 300px; 
+    text-align: left;
+    white-space: nowrap;
 }
 
-.connection-forms a:hover {
-    transform: scale(1.2);
-    color: #1e90ff;
+.trait {
+    font-weight: 600;
+    color: #00a1ff;
+    white-space: nowrap;
+    min-height: 1em;
+    min-width: 1ch;
 }
 
-.connection-forms i {
-    margin-right: 10px;
+.cursor {
+    animation: blink 1s step-end infinite;
+    position: absolute;
+    margin-left: 2px;
 }
 
-#linkedIn {
-    color: #0077B5;
+.connect > h2 {
+    border-bottom: 2px solid #00a1ff;; 
+    display: inline-block;
+    padding-bottom: 5px;
 }
