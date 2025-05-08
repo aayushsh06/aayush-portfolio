@@ -20,9 +20,21 @@ const Education = () => {
           <div className="education-dates">2024 - 2027</div>
           <div className="education-details">
             <ul>
-              <li>GPA: 4.0</li>
-              <li>Relevant Coursework: Data Structures & Algorithms, Computer Organization & Architecture, Web Systems, Practical Data Science, Software Engineering</li>
-              <li>Dean's List: Fall 2024, Winter 2025</li>
+              <li><span>GPA:</span> 4.0</li>
+              <li><span>Relevant Coursework:</span> Data Structures & Algorithms, Computer Organization & Architecture, Web Systems, Practical Data Science, Software Engineering</li>
+              <li><span>Dean's List:</span> Fall 2024, Winter 2025</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="education-card">
+          <div className="education-school">Troy High School</div>
+          <div className="education-dates">2020 - 2024</div>
+          <div className="education-details">
+            <ul>
+              <li><span>GPA:</span> 4.0</li>
+              <li>USACO Gold Division</li>
+              <li>AP Scholar with Distinction</li>
             </ul>
           </div>
         </div>

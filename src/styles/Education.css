@@ -1,7 +1,5 @@
 .education-section {
   width: 100%;
-  padding: 2rem 0;
-  margin-top: 2rem;
   max-width: 1000px;
   display: flex;
   flex-direction: column;
@@ -39,9 +37,8 @@
 }
 
 .education-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  display: flexbox;
+  flex-direction: column;
   padding: 1rem 0;
 }
 
@@ -52,11 +49,18 @@
   box-shadow: 0 4px 24px rgba(0,0,0,0.13);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   max-width: 1200px;
+  margin-bottom: 1rem;
 }
 
 .education-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 6px 28px rgba(0,161,255,0.15);
+}
+
+.education-card span {
+  font-weight: 500;
+  font-size: 1.1rem;
+  color:#368dce
 }
 
 .education-school {

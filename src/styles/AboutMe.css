@@ -1,6 +1,6 @@
 .about-container {
     max-width: 1200px;
-    width: 800px;
+    width: 1000px;
     margin: 0 auto;
     padding-bottom: 2rem;
     opacity: 0;
@@ -310,5 +310,96 @@
         padding: 0.4rem 0.7rem;
         font-size: 1rem;
         border-radius: 6px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .about-container {
+        width: 90%;
+        padding: 1rem;
+    }
+
+    .about-section {
+        margin-bottom: 1.5rem;
+    }
+
+    .about-header {
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
+        justify-content: center;
+    }
+
+    .about-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .profile-section {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .profile-image {
+        width: 180px;
+        height: 180px;
+        margin: 0 auto;
+    }
+
+    .profile-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-info h1 {
+        font-size: 2.2rem;
+    }
+
+    .profile-info h2 {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .info-cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.8rem;
+    }
+
+    .info-card {
+        padding: 0.6rem;
+        flex-direction: column;
+        text-align: center;
+        min-height: 70px;
+    }
+
+    .info-icon {
+        width: 16px;
+        height: 16px;
+        margin-bottom: 0.2rem;
+    }
+
+    .info-card span {
+        font-size: 0.8rem;
+    }
+
+    .connect-section h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .connect-links {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .connect-link {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .connect-icon {
+        width: 20px;
+        height: 20px;
     }
 }
