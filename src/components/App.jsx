@@ -4,22 +4,17 @@ import Experience from './Experience.jsx'
 import '../styles/App.css'
 import Current from './Current.jsx'
 import ProjectCard from './ProjectCard.jsx'
-import { useEffect } from 'react';
-import AlgoScope from '../assets/AlgoScope.png'
-import MaizeMarket from '../assets/MaizeMarket.png'
-import TextToAI from '../assets/TextToAI.png'
-import Diffnosis from '../assets/Diffnosis.png'
-import DiscordBots from '../assets/DiscordBots.png'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ProjectPage from './ProjectPage'; 
 import Navbar from './Navbar';
 import Education from './Education';
 import projects from './projectsData';
+import {useEffect, useState} from 'react';
 
 function App() {
+  const [currentSection, setCurrentSection] = useState('about');
 
   const scrollToSection = (sectionClass) => {
-    //navigate("/");
     const element = document.querySelector(`.${sectionClass}`);
     if (element) {
       const yOffset = -document.querySelector('.navigation').offsetHeight; 
@@ -28,11 +23,39 @@ function App() {
     }
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ['about', 'education', 'tech-stack', 'experience', 'projects'];
+      let closestSection = null;
+      let minDistance = Infinity;
+      sections.forEach(section => {
+        const element = document.querySelector(`.${section}-section`);
+        if (element) {
+          const distance = Math.abs(element.getBoundingClientRect().top);
+          if (distance < minDistance && element.getBoundingClientRect().top <= window.innerHeight / 2) {
+            minDistance = distance;
+            closestSection = section;
+          }
+        }
+      });
+      setCurrentSection(closestSection);
+    };
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    if (location.pathname === '/') {
+      const element = document.querySelector(`.${currentSection}-section`);
+      if (element) element.focus();
+    }
+  }, [currentSection, location.pathname]);
 
   return (
     <Router>
       <div className="portfolio-container">
-        <Navbar />
+        <Navbar currentSection={currentSection} />
         <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
           <Routes>
             <Route path="/" element={
@@ -53,9 +76,6 @@ function App() {
                   <Experience />
                 </section>
 
-                {/*<section className="current-section">
-                  <Current />
-                </section> */}
 
                 <section className="projects-section">
                   <div className="projects-header">

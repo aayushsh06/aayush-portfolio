@@ -49,7 +49,7 @@ body {
   transition: color 0.2s, background 0.2s;
 }
 
-.navigation button:hover, .navigation button:focus {
+.navigation button:hover{
   color: #00a1ff;
   background: rgba(0,161,255,0.08);
 }
@@ -179,16 +179,13 @@ section {
 .projects-section {
   width: 100%;
   max-width: 1000px;
-  margin: 0rem auto 10rem auto;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
 }
 
-.tech-stack-section{
-  margin: 0 auto 15rem auto;
-}
 
 .about-section h2,
 .education-header,

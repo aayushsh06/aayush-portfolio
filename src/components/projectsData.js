@@ -3,6 +3,7 @@ import MaizeMarket from '../assets/MaizeMarket.png';
 import TextToAI from '../assets/TextToAI.png';
 import Diffnosis from '../assets/Diffnosis.png';
 import DiscordBots from '../assets/DiscordBots.png';
+import ERecycleNow from '../assets/ERecycleNow.png'; // Make sure you have this image in your assets folder
 
 const projects = [
   {
@@ -52,8 +53,18 @@ const projects = [
     description: 'This project includes several custom-built Discord bots designed to automate tasks, manage server activities, and engage users. Bots include an AI chatbot using GPT-4, a calendar scheduler, moderation tools, and notification systems. These bots improve the experience in Discord servers by handling repetitive tasks and providing useful features like reminders, auto-responses, and event tracking.',
     techStack: ['Swift', 'Python', 'Pandas'],
     githubLink: 'https://github.com/aayushsh06/Discord-Bots',
-    demoLink: 'https://github.com/aayushsh06/Text-to-AI',
+    demoLink: '',
     dates: 'May 2024 – August 2024',
+  },
+  {
+    id: 'e-recycle-now',
+    name: 'E-Recycle-Now',
+    image: ERecycleNow,
+    description: 'Designed a mobile app for e-waste recycling, leveraging Java with ML-powered item scanning and disposal guidance, earning First Runner-Up in the Congressional App Challenge. Utilized TensorFlow for image identification, SQLite database for storing recycling data, Android Studio for development, and Google Maps API for location services.',
+    techStack: ['Java','Android Studio','HTML/CSS', 'SQLite', 'TensorFlow'],
+    githubLink: 'https://github.com/aayushsh06/E-Recycle-Now',
+    demoLink: '',
+    dates: 'June 2022 – November 2022',
   },
 ];
 

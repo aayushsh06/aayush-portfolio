@@ -3,14 +3,14 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import '../styles/Navbar.css';
 
 const NAV_ITEMS = [
-  { label: 'About', section: 'about-section' },
-  { label: 'Education', section: 'education-section' },
-  { label: 'Tech Stack', section: 'tech-stack-section' },
-  { label: 'Experience', section: 'experience-section' },
-  { label: 'Projects', section: 'projects-section' },
+  { label: 'About', section: 'about' },
+  { label: 'Education', section: 'education' },
+  { label: 'Tech Stack', section: 'tech-stack' },
+  { label: 'Experience', section: 'experience' },
+  { label: 'Projects', section: 'projects' },
 ];
 
-const Navbar = () => {
+const Navbar = ({ currentSection }) => {
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -18,10 +18,10 @@ const Navbar = () => {
     if (location.pathname !== '/') {
       navigate('/', { replace: false });
       setTimeout(() => {
-        scrollToSection(sectionClass);
+        scrollToSection(sectionClass + '-section');
       }, 50);
     } else {
-      scrollToSection(sectionClass);
+      scrollToSection(sectionClass + '-section');
     }
   };
 
@@ -38,7 +38,11 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       {NAV_ITEMS.map(item => (
-        <button key={item.section} onClick={() => handleNavClick(item.section)}>
+        <button
+          key={item.section}
+          className={currentSection === item.section ? 'active' : ''}
+          onClick={() => handleNavClick(item.section)}
+        >
           {item.label}
         </button>
       ))}

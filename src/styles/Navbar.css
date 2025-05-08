@@ -27,9 +27,16 @@
   transition: color 0.2s, background 0.2s;
 }
 
-.navbar button:hover, .navbar button:focus {
+.navbar button:hover {
   color: #00a1ff;
   background: rgba(0,161,255,0.08);
+}
+
+.navbar button.active {
+  color: #00a1ff;
+  background: rgba(0,161,255,0.18);
+  font-weight: 700;
+  border-bottom: 2px solid #00a1ff;
 }
 
 @media (max-width: 768px) {
