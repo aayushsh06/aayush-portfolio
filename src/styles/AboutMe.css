@@ -315,7 +315,7 @@
 
 @media (max-width: 1000px) {
     .about-container {
-        width: 90%;
+        max-width: 80vw;
         padding: 1rem;
     }
 

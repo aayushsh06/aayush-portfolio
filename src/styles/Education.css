@@ -1,28 +1,31 @@
 .education-section {
   width: 100%;
   max-width: 1000px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  padding: 0.5rem;
 }
 
 .education-header {
   display: flex;
+  flex-direction: row;
   align-items: center;
   gap: 1rem;
-  margin-bottom: 0.5rem;
-  justify-content: flex-start;
+  margin-bottom: 1rem;
   width: 100%;
 }
 
 .education-header svg {
+  width: 28px;
+  height: 28px;
   color: #00a1ff;
 }
 
 .education-header h2 {
   font-size: 2.5rem;
-  color: #fff;
-  font-weight: 700;
+  color: #e4e8f0;
   margin: 0;
   text-align: left;
 }
@@ -43,54 +46,70 @@
 }
 
 .education-card {
-  background: #1c2333;
-  border-radius: 16px;
-  padding: 1.5rem;
+  background: linear-gradient(145deg, #1c2333, #232b3e);
+  border-radius: 12px;
+  padding: 1.2rem;
   box-shadow: 0 4px 24px rgba(0,0,0,0.13);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   max-width: 1200px;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(0, 161, 255, 0.1);
 }
 
 .education-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 28px rgba(0,161,255,0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(0, 161, 255, 0.2);
 }
 
 .education-card span {
   font-weight: 500;
   font-size: 1.1rem;
-  color:#368dce
+  color: #368dce;
 }
 
 .education-school {
   font-size: 1.4rem;
   font-weight: 700;
   color: #fff;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.8rem;
+  position: relative;
+  padding-left: 1rem;
+}
+
+.education-school::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 70%;
+  background: #00a1ff;
+  border-radius: 2px;
 }
 
 .education-degree {
-  color: #00a1ff;
+  color: #368dce;
   font-size: 1.1rem;
-  font-weight: 500;
-  margin-bottom: 0.5rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
 }
 
 .education-dates {
-  color: #c4c9d4;
+  color: #fff;
   font-size: 0.95rem;
-  margin-bottom: 1rem;
-  padding: 0.3rem 0.8rem;
-  background: rgba(0, 161, 255, 0.08);
-  border-radius: 20px;
+  margin-bottom: 1.2rem;
+  padding: 0.4rem 1rem;
+  background: rgba(0, 161, 255, 0.12);
+  border-radius: 25px;
   display: inline-block;
+  font-weight: 500;
 }
 
 .education-details {
-  color: #c4c9d4;
+  color: #e4e8f0;
   font-size: 1rem;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 .education-details ul {
@@ -100,94 +119,47 @@
 }
 
 .education-details li {
-  margin-bottom: 0.5rem;
-  padding-left: 1.5rem;
+  margin-bottom: 0.8rem;
+  padding-left: 1.8rem;
   position: relative;
 }
 
 .education-details li:before {
-  content: "•";
+  content: "→";
   color: #00a1ff;
   position: absolute;
   left: 0;
+  font-weight: bold;
 }
 
-@media (max-width: 768px) {
-  .education-header h2 {
-    font-size: 2rem;
-  }
-
-  .education-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-
-  .education-school {
-    font-size: 1.2rem;
-  }
-
-  .education-degree {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
+@media (max-width: 1000px) {
   .education-section {
-    padding: 1rem 0;
+    max-width: 80vw;
+    padding: 0.5rem;
   }
-
   .education-header h2 {
     font-size: 1.8rem;
   }
-
+  .education-header svg {
+    width: 24px;
+    height: 24px;
+  }
   .education-card {
-    padding: 1.2rem;
+    width: 100%;
+    margin: 0.8rem 0;
   }
-
   .education-school {
-    font-size: 1.1rem;
-  }
-
-  .education-degree {
-    font-size: 0.95rem;
-  }
-
-  .education-dates {
-    font-size: 0.9rem;
-    padding: 0.2rem 0.6rem;
-  }
-
-  .education-details {
-    font-size: 0.95rem;
-  }
-}
-
-@media (max-width: 700px) {
-  .education-section {
-    padding: 1rem 0.2rem;
-  }
-  .education-header h2 {
     font-size: 1.3rem;
   }
-  .education-header svg {
-    width: 20px;
-    height: 20px;
-  }
-  .education-card {
-    padding: 0.8rem 0.5rem;
-    border-radius: 10px;
-  }
-  .education-school {
+  .education-degree {
     font-size: 1.1rem;
   }
-  .education-degree {
-    font-size: 0.95rem;
-  }
   .education-dates {
-    font-size: 0.85rem;
-    padding: 0.2rem 0.6rem;
+    font-size: 0.9rem;
   }
   .education-details {
-    font-size: 0.92rem;
+    font-size: 0.95rem;
   }
 }
+
+
