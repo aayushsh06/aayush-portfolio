@@ -4,20 +4,20 @@
     align-items: flex-start;
     justify-content: flex-start;
     max-width: 1000px;
-    padding: 8px;
 }
 
-.tech-stack-header {
+.tech-stack-section .tech-stack-header {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 1rem;
     justify-content: flex-start;
     width: 100%;
     margin-bottom: 1rem;
     flex-wrap: wrap;
+    max-width: 1000px;
 }
 
-.tech-stack-header svg {
+.tech-stack-section .tech-stack-header svg {
     color: #00a1ff;
     width: 28px;
     height: 28px;
@@ -34,7 +34,6 @@
     line-height: 1;
     display: inline-block;
     vertical-align: middle;
-    color: red;
 }
 
 .tech-stack-header .horizontal-line,
@@ -45,7 +44,7 @@
     margin-bottom: 0.7rem;
 }
 
-.tech-stack {
+.tech-stack-section .tech-stack {
     max-width: 1200px;
     margin: 0 auto;
     padding: 8px;
@@ -53,22 +52,22 @@
     animation: fadeIn 0.8s ease-out forwards;
 }
 
-.tech-stack.fade-in {
+.tech-stack-section .tech-stack.fade-in {
     opacity: 1;
 }
 
-.tech-header {
+.tech-stack-section .tech-header {
     display: flex;
     align-items: center;
     gap: 1rem;
     margin-bottom: 0.5rem;
 }
 
-.tech-header svg {
+.tech-stack-section .tech-header svg {
     color: #00a1ff;
 }
 
-.tech-header h2 {
+.tech-stack-section .tech-header h2 {
     font-size: 2.5rem;
     color: #fff;
     font-weight: 700;
@@ -76,21 +75,21 @@
     text-align: left;
 }
 
-.horizontal-line {
+.tech-stack-section .horizontal-line {
     height: 2px;
     width: 100%;
     background: linear-gradient(to right, #00a1ff, transparent);
     margin-bottom: 2rem;
 }
 
-.items {
+.tech-stack-section .items {
     display: flex;
     flex-direction: column;
     gap: 2rem;
     width: 100%;
 }
 
-.tech-section {
+.tech-stack-section .tech-section {
     background-color: #1c2333;
     border-radius: 12px;
     padding: 2rem 1.5rem;
@@ -98,7 +97,7 @@
     width: 100%;
 }
 
-.tech-section h3 {
+.tech-stack-section .tech-section h3 {
     font-size: 1.5rem;
     color: #fff;
     margin-bottom: 1.5rem;

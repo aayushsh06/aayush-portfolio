@@ -45,6 +45,10 @@
   color: #fff;
 }
 
+.tech-stack{
+  margin-top: 0.5rem;
+}
+
 .tech-stack p, .tech-stack .frontend, .tech-stack .backend, .tech-stack .framework, .tech-stack .html-css {
   background-color: #242e42;
   color: #00a1ff;
