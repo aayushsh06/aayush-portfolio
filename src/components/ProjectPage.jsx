@@ -26,12 +26,14 @@ const ProjectPage = () => {
 
   return (
     <div className="project-detail-container">
-      <button onClick={handleBackClick} className="back-button">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M19 12H5M12 19l-7-7 7-7"/>
-        </svg>
-        Back to Projects
-      </button>
+      <div className="project-detail-header">
+        <button onClick={handleBackClick} className="back-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+          </svg>
+          Back to Projects
+        </button>
+      </div>
       <img src={project.image} alt={project.name} className="project-detail-image" />
       <div className="project-detail-title">{project.name}</div>
       <div className="project-detail-dates">{project.dates}</div>
@@ -51,4 +53,4 @@ const ProjectPage = () => {
   );
 };
 
-export default ProjectPage
+export default ProjectPage;

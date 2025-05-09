@@ -125,7 +125,6 @@
 
 .info-icon {
     width: 32px;
-    height: 32px;
     color: #00a1ff;
 }
 
@@ -182,7 +181,7 @@
     50% { opacity: 0; }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .about-container {
         padding: 0.5rem 0.5rem;
         max-width: 100vw;
@@ -263,55 +262,6 @@
     }
 }
 
-@media (max-width: 700px) {
-    .about-section {
-        padding: 1.2rem 0.2rem;
-    }
-    .about-header h2 {
-        font-size: 1.5rem;
-    }
-    .profile-section {
-        grid-template-columns: 80px 1fr;
-        gap: 1rem;
-        align-items: center;
-    }
-    .profile-image {
-        width: 80px;
-        height: 80px;
-        border-width: 2px;
-    }
-    .profile-info h1 {
-        font-size: 2rem;
-    }
-    .profile-info h2 {
-        font-size: 1rem;
-    }
-    .info-cards {
-        grid-template-columns: 1fr;
-        gap: 0.5rem;
-    }
-    .info-card {
-        padding: 0.7rem 0.5rem;
-        font-size: 0.95rem;
-        border-radius: 8px;
-    }
-    .info-icon {
-        width: 20px;
-        height: 20px;
-    }
-    .connect-section h3 {
-        font-size: 1.1rem;
-        margin-bottom: 1rem;
-    }
-    .connect-links {
-        gap: 0.7rem;
-    }
-    .connect-link {
-        padding: 0.4rem 0.7rem;
-        font-size: 1rem;
-        border-radius: 6px;
-    }
-}
 
 @media (max-width: 1000px) {
     .about-container {
@@ -368,19 +318,19 @@
 
     .info-card {
         padding: 0.6rem;
-        flex-direction: column;
+        flex-direction: row;
         text-align: center;
         min-height: 70px;
     }
 
     .info-icon {
         width: 16px;
-        height: 16px;
         margin-bottom: 0.2rem;
     }
 
     .info-card span {
         font-size: 0.8rem;
+        text-align: left;
     }
 
     .connect-section h3 {

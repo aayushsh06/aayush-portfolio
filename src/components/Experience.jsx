@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/Experience.css';
+import WashintonLogo from '../assets/Washington.png';
+import AmazonLogo from '../assets/Amazon.png';
 
 const Experience = () => {
   const [activeTab, setActiveTab] = useState(2);
@@ -9,40 +11,38 @@ const Experience = () => {
     {
       company: "Coding Competitions Club",
       title: "Vice President",
-      date: "January 2023 - Present",
+      date: "September 2021 - May 2024",
       icon: "code",
-      skills: ["Leadership", "Algorithm Design", "Problem Solving", "Team Management"],
+      skills: ["Leadership", "DSA", "Problem Solving", "Competitive Programming"],
       description: [
-        "Led weekly coding workshops for over 30 members, covering advanced algorithms and data structures",
-        "Coordinated team participation in 5 regional competitions, achieving top 3 placements",
-        "Developed and maintained the club's problem archive system using React and Node.js",
-        "Mentored 12 junior members, resulting in 75% improvement in problem-solving capabilities"
+        "Served as Vice President, overseeing the planning and execution of weekly club meetings and activities",
+        "Led livecoding sessions and guided problem-solving discussions to enhance member engagement",
+        "Coordinated club operations, including going over various Data Structures and Algorithms topics",
+        "Mentored students, significantly improving their coding and algorithmic thinking skills"
       ]
     },
     {
       company: "University of Washington",
       title: "Research Intern",
-      date: "June 2022 - August 2022",
-      icon: "flask",
-      skills: ["Data Analysis", "Research Methodology", "Python", "TensorFlow"],
+      date: "January 2022 - December 2023",
+      icon: WashintonLogo,
+      skills: ["Machine Learning", "Data Science", "Research", "Python", "HTML/CSS"],
       description: [
-        "Conducted research on machine learning applications in healthcare data analysis",
-        "Implemented and evaluated 3 prediction models using Python and TensorFlow",
-        "Collaborated with a team of 5 graduate students on data collection and preprocessing",
-        "Co-authored a research paper presented at the university's annual symposium"
+        "Engineered features to boost ML model accuracy (95%+) and performance (30%) for land cover and flood prediction in TerrSet",
+        "Developed Python algorithms to merge API-based raster data and optimize processing workflows",
+        "Built an HTML/CSS flood mitigation primer website for decision-makers to help obtain crowdsourced data",
+        "Produced a high-resolution Dasymetric map of the Contiguous U.S. using parallel processing",
+        "Presented research at the NSF Civic Innovation Challenge, benefiting thousands of Michigan residents"
       ]
     },
     {
-      company: "Ally Financial",
-      title: "Software Engineer Intern",
-      date: "September 2022 - December 2022",
-      icon: "building",
-      skills: ["JavaScript", "React", "GraphQL", "Agile Methodology"],
+      company: "Amazon",
+      title: "Junior Software Development Engineer",
+      date: "June 2025 -  Present",
+      icon: AmazonLogo,
+      skills: ["Java", "???", "???", "???"],
       description: [
-        "Developed new features for the company's customer dashboard using React and GraphQL",
-        "Optimized API calls resulting in 40% faster load times for critical customer pages",
-        "Participated in daily stand-ups and bi-weekly sprint planning with a team of 8 engineers",
-        "Implemented automated testing protocols improving code coverage by 25%"
+        "Upcoming..."
       ]
     }
   ];
@@ -79,27 +79,13 @@ const Experience = () => {
             <polyline points="8 6 2 12 8 18"></polyline>
           </svg>
         );
-      case 'flask':
+      case WashintonLogo:
         return (
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="tab-button-icon">
-            <path d="M9 3h6v2H9zM7 8h10m-5 8v-5M8 21h8a2 2 0 0 0 2-2v-6.4a2 2 0 0 0-.6-1.4l-4.7-4.7a1 1 0 0 1-.3-.7V3a1 1 0 0 0-1-1H10a1 1 0 0 0-1 1v2.9a1 1 0 0 1-.3.7l-4.7 4.7a2 2 0 0 0-.6 1.4V19a2 2 0 0 0 2 2z"></path>
-          </svg>
+          <img src={WashintonLogo} alt="University of Washington" className="tab-button-icon" />
         );
-      case 'building':
+      case AmazonLogo:
         return (
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="tab-button-icon">
-            <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
-            <path d="M9 22v-4h6v4"></path>
-            <path d="M8 6h.01"></path>
-            <path d="M16 6h.01"></path>
-            <path d="M12 6h.01"></path>
-            <path d="M12 10h.01"></path>
-            <path d="M12 14h.01"></path>
-            <path d="M16 10h.01"></path>
-            <path d="M16 14h.01"></path>
-            <path d="M8 10h.01"></path>
-            <path d="M8 14h.01"></path>
-          </svg>
+          <img src={AmazonLogo} alt="Amazon" className="tab-button-icon" />
         );
       default:
         return null;
