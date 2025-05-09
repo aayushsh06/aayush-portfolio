@@ -194,6 +194,10 @@
    max-width: 80vw;
   }
 
+  .experience-header h2 {
+    font-size: 1.8rem;
+  }
+
   .tab-list {
     flex-direction: column;
     overflow-x: auto;
