@@ -15,8 +15,8 @@ const Navbar = ({ currentSection }) => {
   const location = useLocation();
 
   const handleNavClick = (sectionClass) => {
-    if (location.pathname !== '/') {
-      navigate('/', { replace: false });
+    if (location.pathname !== '/aayush-portfolio') {
+      navigate('/aayush-portfolio', { replace: false });
       setTimeout(() => {
         scrollToSection(sectionClass + '-section');
       }, 50);

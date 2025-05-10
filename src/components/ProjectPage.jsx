@@ -10,7 +10,7 @@ const ProjectPage = () => {
   const location = useLocation();
 
   const handleBackClick = () => {
-    navigate('/', { replace: false });
+    navigate('/aayush-portfolio', { replace: false });
     setTimeout(() => {
       const element = document.querySelector('.projects-section');
       if (element) {
