@@ -49,7 +49,6 @@
     margin: 0 auto;
     padding: 8px;
     opacity: 0;
-    animation: fadeIn 0.8s ease-out forwards;
 }
 
 .tech-stack-section .tech-stack.fade-in {
@@ -171,7 +170,6 @@
   box-shadow: 0 4px 24px rgba(0,0,0,0.13);
   position: relative;
   overflow: visible;
-  animation: fadeIn 0.8s ease-out;
   transition: box-shadow 0.2s;
 }
 
