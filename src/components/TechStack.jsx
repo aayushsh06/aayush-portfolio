@@ -52,18 +52,6 @@ const techGroups = [
 ];
 
 const TechStack = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) setIsVisible(true);
-      },
-      { threshold: 0.2 }
-    );
-    const container = document.querySelector('.tech-stack');
-    if (container) observer.observe(container);
-    return () => { if (container) observer.unobserve(container); };
-  }, []);
 
   return (
     <div className="tech-stack-section">
@@ -74,7 +62,7 @@ const TechStack = () => {
         <h2>Tech Stack</h2>
       </div>
       <div className="horizontal-line"></div>
-      <section className={`tech-stack revamped ${isVisible ? 'fade-in' : ''}`}>
+      <section className={`tech-stack revamped fade-in`}>
         <div className="tech-timeline">
           {techGroups.map((group, idx) => (
             <div className="tech-group" key={group.label} style={{ '--accent': group.color }}>
