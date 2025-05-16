@@ -58,7 +58,7 @@ function App() {
         <Navbar currentSection={currentSection} />
         <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
           <Routes>
-            <Route path="/aayush-portfolio" element={
+            <Route path="/" element={
               <main>
                 <section className="about-section">
                   <AboutMe />
@@ -105,7 +105,7 @@ function App() {
                 </section>
               </main>
             } />
-            <Route path="/aayush-portfolio/projects/:projectId" element={<ProjectPage />} />
+            <Route path="/projects/:projectId" element={<ProjectPage />} />
           </Routes>
         </div>
       </div>

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function ProjectCard({ projectId, projectName, date, projectImage, githubLink, demoLink, techStack }) {
   return (
-    <Link to={`/aayush-portfolio/projects/${projectId}`} style={{ textDecoration: 'none' }}>
+    <Link to={`/projects/${projectId}`} style={{ textDecoration: 'none' }}>
       <div className="project-card">
         <div className="project-image-container">
           <img src={projectImage} alt={projectName} className="project-image" />
