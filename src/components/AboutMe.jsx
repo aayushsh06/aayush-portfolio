@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/AboutMe.css';
 import UmichLogo from '../assets/Umich.png';
+import AayushImage from '../assets/AayushImage.jpeg'
 
 const AboutMe = () => {
     const roles = ['Full Stack Developer', 'Comp Sci Student', 'Software Engineer'];
@@ -76,7 +77,7 @@ const AboutMe = () => {
                 <div className="profile-section">
                     <img
                         className="profile-image"
-                        src="https://media.licdn.com/dms/image/v2/D5603AQFdRbA2LNo9Uw/profile-displayphoto-shrink_800_800/B56ZYxYS3BGoAg-/0/1744585175267?e=1752105600&v=beta&t=E-WWfRSisDFtEQH0Q7c9D9OF8TbID6E7jlUNX-LRs1c"
+                        src={AayushImage}
                         alt="Aayush Profile"
                     />
                     <div className="profile-info">

@@ -40,9 +40,13 @@ const Experience = () => {
       title: "Junior Software Development Engineer",
       date: "June 2025 -  Present",
       icon: AmazonLogo,
-      skills: ["Java", "???", "???", "???"],
+      skills: ["Java", "TypeScript", "React"],
       description: [
-        "Upcoming..."
+        "Migrated messaging features such as Returns and Review Requests from across Amazon Seller Central to a centralized hub using Java, Spring, React, and Typescript, simplifying messaging for millions of sellers.",
+        "Built DMARC and other security blockers for message processing, mitigating potential vulnerabilities.",
+        "Led JDK 21 migration for multiple services/pipelines, boosting performance, maintainability, and long-term support compliance.",
+        "Developed reusable React skeleton components for messaging UI, designed for sitewide expansion.",
+        "Worked on numerous tickets involving bug fixes, feature development, and unblocking CI/CD  pipelines. ",
       ]
     }
   ];
