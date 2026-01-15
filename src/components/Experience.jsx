@@ -42,15 +42,15 @@ const Experience = () => {
       icon: AmazonLogo,
       skills: ["Java", "TypeScript", "React"],
       description: [
-        "Migrated messaging features such as Returns and Review Requests from across Amazon Seller Central to a centralized hub using Java, Spring, React, and Typescript, simplifying messaging for millions of sellers.",
-        "Built DMARC and other security blockers for message processing, mitigating potential vulnerabilities.",
+        "Migrated architecture from threads-based to cases-based system across messaging services, resolving hot partition issues, DLQ persistence problems, and reducing development effort by 12 weeks/year.",
+        "Consolidated messaging features (Returns, Reviews, etc.) into a centralized hub using Java, Spring, React, and TypeScript, streamlining communication for millions of sellers.",
+        "Built and audited DMARC and other security blockers for message processing, improving security.",
         "Led JDK 21 migration for multiple services/pipelines, boosting performance, maintainability, and long-term support compliance.",
-        "Developed reusable React skeleton components for messaging UI, designed for sitewide expansion.",
-        "Worked on numerous tickets involving bug fixes, feature development, and unblocking CI/CD  pipelines. ",
+        "Implemented code to translate messages via Machine Learning, stored them in a distributed S3 system, and launched a sitewide translation feature that simplified customer support across Amazon.",
+        "Worked on numerous tickets involving bug fixes, feature development, and unblocking CI/CD pipelines.",
       ]
     }
-  ];
-
+  ]; 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {

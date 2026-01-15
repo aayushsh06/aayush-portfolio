@@ -34,7 +34,6 @@ const ProjectPage = () => {
           Back to Projects
         </button>
       </div>
-      <img src={project.image} alt={project.name} className="project-detail-image" />
       <div className="project-detail-title">{project.name}</div>
       <div className="project-detail-dates">{project.dates}</div>
       <div className="project-detail-description">{project.description}</div>
@@ -44,7 +43,9 @@ const ProjectPage = () => {
         ))}
       </div>
       <div className="project-detail-links">
-        <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="project-detail-link">GitHub</a>
+        {project.githubLink && (
+          <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="project-detail-link">GitHub</a>
+        )}
         {project.demoLink && (
           <a href={project.demoLink} target="_blank" rel="noopener noreferrer" className="project-detail-link">Demo</a>
         )}

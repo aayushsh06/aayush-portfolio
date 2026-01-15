@@ -1,44 +1,40 @@
+/* Global styles - minimal overrides for modern design */
 body {
-    background-color: #0a192f;
-    background-image: url("https://www.hdwallpapers.in/download/black_triangle_4k_hd_abstract_2-HD.jpg");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    color: #8892b0;
-    font-family: 'SF Mono', 'Fira Code', monospace;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
 }
 
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(15, 20, 30, 0.82);
-    z-index: 0;
-    pointer-events: none;
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
 }
 
-body > * {
-    position: relative;
-    z-index: 1;
+/* Selection styling */
+::selection {
+    background: rgba(0, 212, 255, 0.3);
+    color: var(--text-primary);
 }
 
-h1, h2, h3, h4, h5, h6 {
-    color: #ccd6f6;
-    font-family: 'Calibre', 'Inter', sans-serif;
+::-moz-selection {
+    background: rgba(0, 212, 255, 0.3);
+    color: var(--text-primary);
 }
 
-a {
-    color: #64ffda;
-    text-decoration: none;
-    transition: color 0.3s ease;
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 10px;
 }
 
-a:hover {
-    color: #64ffda;
+::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--gradient-primary);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
 }

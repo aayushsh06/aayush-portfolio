@@ -26,18 +26,6 @@ const Education = () => {
             </ul>
           </div>
         </div>
-
-        <div className="education-card">
-          <div className="education-school">Troy High School</div>
-          <div className="education-dates">2020 - 2024</div>
-          <div className="education-details">
-            <ul>
-              <li><span>GPA:</span> 4.0</li>
-              <li>USACO Gold Division</li>
-              <li>AP Scholar with Distinction</li>
-            </ul>
-          </div>
-        </div>
       </div>
     </div>
   )

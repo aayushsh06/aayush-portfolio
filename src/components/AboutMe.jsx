@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/AboutMe.css';
 import UmichLogo from '../assets/Umich.png';
-import AayushImage from '../assets/AayushImage.jpeg'
+import AayushImage from '../assets/AayushImage.jpg'
 
 const AboutMe = () => {
     const roles = ['Full Stack Developer', 'Comp Sci Student', 'Software Engineer'];
